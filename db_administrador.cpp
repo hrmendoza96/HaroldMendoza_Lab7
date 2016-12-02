@@ -22,8 +22,12 @@ string db_administrador::toString(){
   ss << Usuario::toString() << " Fecha que Entro a la Institucion: " << fechaEntrada << "\n";
   return ss.str();
 }
-int db_administrador::verificarPassSize(){
-  
+bool db_administrador::verificarPassSize(){
+  if(password.size()==16){
+    return true;
+  }else{
+    return false;
+  }
 
 }
 db_administrador::~db_administrador(){

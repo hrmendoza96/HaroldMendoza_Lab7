@@ -7,8 +7,6 @@ void menu();
 void login();
 
 int main(int argc, char const *argv[]) {
-  string jose = "jose";
-  cout << "Size de Jose: "<< jose.size() << endl;
   int opcion=0;
   do {
     menu();

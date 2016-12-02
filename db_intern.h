@@ -8,7 +8,13 @@ class db_intern : public Usuario{
   private:
     int numeroDias;
   public:
-    virtual int verificarPassSize();
+    db_intern();
+    db_intern(string, string, string, int);
+    void setNumeroDias(int);
+    int getNumeroDias();
+    string toString();
+    virtual bool verificarPassSize();
+    ~db_intern();
 
 
 };

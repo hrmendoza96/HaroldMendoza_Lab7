@@ -8,6 +8,12 @@ class db_manager : public Usuario{
   private:
     double sueldo;
   public:
-    virtual int verificarPassSize();
+    db_manager();
+    db_manager(string, string, string, double);
+    void setSueldo(double);
+    double getSueldo();
+    string toString();
+    virtual bool verificarPassSize();
+    ~db_manager();
 
 };

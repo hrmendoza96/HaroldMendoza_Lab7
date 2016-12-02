@@ -21,7 +21,7 @@ class Usuario{
     string getCorreo();
     string getPassword();
     string toString();
-    virtual int verificarPassSize();
+    virtual bool verificarPassSize();
     virtual ~Usuario();
 
 

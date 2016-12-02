@@ -35,8 +35,8 @@ string Usuario::getCorreo(){
 string Usuario::getPassword(){
   return password;
 }
-int Usuario::verificarPassSize(){
-  return 0;
+bool Usuario::verificarPassSize(){
+  return false;
 }
 
 string Usuario::toString() {

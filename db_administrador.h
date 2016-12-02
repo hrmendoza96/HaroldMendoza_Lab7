@@ -13,7 +13,7 @@ class db_administrador : public Usuario{
     void setFechaEntrada(string);
     string getFechaEntrada();
     string toString();
-    virtual int verificarPassSize();
+    virtual bool verificarPassSize();
     ~db_administrador();
 
 

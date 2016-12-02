@@ -10,12 +10,14 @@ class Usuario{
 
   public:
     Usuario();
-    void setNombre();
-    void setCorreo();
-    void setPassword();
+    Usuario(string, string, string);
+    void setNombre(string);
+    void setCorreo(string);
+    void setPassword(string);
     string getNombre();
     string getCorreo();
     string getPassword();
+    string toString();
     virtual int verificarPassSize();
     virtual ~Usuario();
 

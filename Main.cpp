@@ -4,6 +4,7 @@
 using namespace std;
 
 void menu();
+void login();
 
 int main(int argc, char const *argv[]) {
   int opcion=0;
@@ -38,4 +39,12 @@ void menu(){
     cout << "4) : " << endl;
 
     cout << "Ingrese su respuesta: " << endl;
+}
+
+
+void login(){
+  cout << "==================Ingrese sus datos para entrar al sistema ============================= "<< endl;
+  cout << "Nombre: ";
+  
+
 }

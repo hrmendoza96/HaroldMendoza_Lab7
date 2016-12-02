@@ -6,6 +6,9 @@
 using namespace std;
 
 Usuario::Usuario(){
+  nombre="";
+  correo="";
+  password="";
 
 }
 

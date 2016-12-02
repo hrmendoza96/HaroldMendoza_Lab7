@@ -1,5 +1,11 @@
 #include <iostream>
 #include <string>
+#include "Usuario.h"
+#include "db_administrador.h"
+#include "db_manager.h"
+#include "db_intern.h"
+#include "db_supervisor.h"
+
 
 using namespace std;
 
@@ -10,18 +16,26 @@ void menuSupervisor();
 
 
 int main(int argc, char const *argv[]) {
-  int opcion=0;
-  
+  Usuario* administrador = new db_administrador("admin", "admin@admin", "123", "2016");
+  string nombre, contrasena;
+  cout << "Ingrese Nombre: ";
+  cin >> nombre;
+  cout << "Ingrese password: ";
+  cin >> contrasena;
+  if(administrador->getNombre()==nombre && administrador->getPassword()==contrasena){
+    cout << "entramos" << endl;
 
+  //}else if(){
 
+  //}else if(){
 
+  //}else if(){
 
+  //}else if(){
 
-
-
-  do {
-
-  } while(opcion!=4);
+  }else{
+    cout << "Ingrese un usuario incorrecto";
+  }
 
   return 0;
 }

@@ -16,26 +16,31 @@ void menuSupervisor();
 
 
 int main(int argc, char const *argv[]) {
+  bool entraSistema=false;
   Usuario* administrador = new db_administrador("admin", "admin@admin", "123", "2016");
   string nombre, contrasena;
-  cout << "Ingrese Nombre: ";
-  cin >> nombre;
-  cout << "Ingrese password: ";
-  cin >> contrasena;
-  if(administrador->getNombre()==nombre && administrador->getPassword()==contrasena){
-    cout << "entramos" << endl;
+  do{
+    cout << "Ingrese Nombre: ";
+    cin >> nombre;
+    cout << "Ingrese password: ";
+    cin >> contrasena;
+    if(administrador->getNombre()==nombre && administrador->getPassword()==contrasena){
+      entraSistema=true;
+      cout << "entramos" << endl;
 
-  //}else if(){
+    //}else if(){
 
-  //}else if(){
+    //}else if(){
 
-  //}else if(){
+    //}else if(){
 
-  //}else if(){
+    //}else if(){
 
-  }else{
-    cout << "Ingrese un usuario incorrecto";
-  }
+    }else{
+      cout << "Ingrese un usuario incorrecto" << endl;
+      entraSistema=false;
+    }
+}while(entraSistema==false);
 
   return 0;
 }

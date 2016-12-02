@@ -19,7 +19,7 @@ string db_administrador::getFechaEntrada(){
 }
 string db_administrador::toString(){
   stringstream ss;
-  ss << Usuario::toString() << " Fecha que Entro a la Institucion: " << fechaEntrada << "\n";
+  ss << Usuario::toString() << fechaEntrada << " ";
   return ss.str();
 }
 bool db_administrador::verificarPassSize(){

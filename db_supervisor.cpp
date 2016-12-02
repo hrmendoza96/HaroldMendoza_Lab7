@@ -18,7 +18,7 @@ int db_supervisor::getContadorIngresa(){
 }
 string db_supervisor::toString(){
   stringstream ss;
-  ss << Usuario::toString() << " Contador de las veces Ingresadas: " << contadorIngresa << "\n";
+  ss << Usuario::toString() << contadorIngresa << " ";
   return ss.str();
 }
 bool db_supervisor::verificarPassSize(){

@@ -18,7 +18,7 @@ double db_manager::getSueldo(){
 }
 string db_manager::toString(){
   stringstream ss;
-  ss << Usuario::toString() << " Sueldo: " << sueldo << "\n";
+  ss << Usuario::toString() << sueldo << " ";
   return ss.str();
 }
 bool db_manager::verificarPassSize(){

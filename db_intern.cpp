@@ -18,7 +18,7 @@ int db_intern::getNumeroDias(){
 }
 string db_intern::toString(){
   stringstream ss;
-  ss << Usuario::toString() << " numeroDias: " << numeroDias << "\n";
+  ss << Usuario::toString() << numeroDias << " ";
   return ss.str();
 }
 bool db_intern::verificarPassSize(){

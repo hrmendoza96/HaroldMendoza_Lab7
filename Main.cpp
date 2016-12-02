@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Usuario.h"
 #include "db_administrador.h"
 #include "db_manager.h"
@@ -18,29 +19,58 @@ void menuSupervisor();
 int main(int argc, char const *argv[]) {
   bool entraSistema=false;
   Usuario* administrador = new db_administrador("admin", "admin@admin", "123", "2016");
+  vector<db_manager*> listaManager;
+  vector<db_intern*> listaIntern;
+  vector<db_supervisor*> listaSupervisor;
+  int TipoLogged=0;
+  Usuario* manager;
+  Usuario* intern;
+  Usuario* supervisor;
+
   string nombre, contrasena;
   do{
+    TipoLogged=0;
     cout << "Ingrese Nombre: ";
     cin >> nombre;
     cout << "Ingrese password: ";
     cin >> contrasena;
     if(administrador->getNombre()==nombre && administrador->getPassword()==contrasena){
       entraSistema=true;
+      TipoLogged=1;
       cout << "entramos" << endl;
-
-    //}else if(){
-
-    //}else if(){
-
-    //}else if(){
-
-    //}else if(){
-
     }else{
-      cout << "Ingrese un usuario incorrecto" << endl;
-      entraSistema=false;
+      for (int i = 0; i < listaManager.size(); i++) {
+        if(listaManager.at(i)->getNombre()==nombre && listaManager.at(i)->getPassword()==contrasena){
+          TipoLogged=2;
+          manager = listaManager.at(i);
+          cout << "entramos M" << endl;
+        }
+      }// fin for
+      for (int i = 0; i < listaIntern.size(); i++) {
+        if(listaIntern.at(i)->getNombre()==nombre && listaIntern.at(i)->getPassword()==contrasena){
+          TipoLogged=3;
+          intern = listaIntern.at(i);
+          cout << "entramos I" << endl;
+        }
+      } // fin for
+      for (int i = 0; i < listaSupervisor.size(); i++) {
+        if(listaSupervisor.at(i)->getNombre()==nombre && listaSupervisor.at(i)->getPassword()==contrasena){
+          TipoLogged=4;
+          supervisor = listaSupervisor.at(i);
+          cout << "entramos S" << endl;
+        }
+      } // fin for
     }
-}while(entraSistema==false);
+    if(TipoLogged==0){
+      cout << endl;
+      cout << "Usuario Incorrecto" << endl;
+    }
+  }while(TipoLogged==0);
+  if(){
+
+  }
+
+
 
   return 0;
 }

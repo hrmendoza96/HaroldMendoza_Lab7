@@ -10,7 +10,7 @@ db_manager.o: Usuario.h db_manager.h db_manager.cpp
 	g++ -c db_manager.cpp
 db_intern.o: Usuario.h db_intern.h db_intern.cpp
 	g++ -c db_intern.cpp
-db_supervisor.o: Usaurio.h db_supervisor.h db_supervisor.cpp
+db_supervisor.o: Usuario.h db_supervisor.h db_supervisor.cpp
 	g++ -c db_supervisor.cpp
 Clean:
 	rm -f *.o temp

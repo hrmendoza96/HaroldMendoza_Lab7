@@ -36,10 +36,10 @@ string Usuario::getPassword(){
   return password;
 }
 int Usuario::verificarPassSize(){
-
+  return 0;
 }
 
-string Personas::toString() {
+string Usuario::toString() {
     stringstream ss;
     ss << "Nombre: " << nombre << "\n";
     ss << "Correo: " << correo << "\n";

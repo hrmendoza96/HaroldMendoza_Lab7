@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 #include "Usuario.h"
 #include "db_administrador.h"
 #include "db_manager.h"
@@ -274,6 +275,33 @@ int main(int argc, char const *argv[]) {
     }while(opcion!=2);
 
   }
+  //=============Archivo Administrador================
+  ofstream archivo;
+  archivo.open("Administrador.txt");
+  archivo << administrador->toString();
+  archivo.close();
+  //=============Archivo Manager================
+  ofstream archivo2;
+  archivo2.open("Manager.txt");
+  for (int i = 0; i < listaManager.size(); i++) {
+    archivo2 << listaManager.at(i)->toString() <<  ";";
+  }
+  archivo.close();
+  //=============Archivo Intern================
+  ofstream archivo3;
+  archivo3.open("Intern.txt");
+  for (int i = 0; i < listaIntern.size(); i++) {
+    archivo3 << listaIntern.at(i)->toString() <<  ";";
+  }
+  archivo3.close();
+  //=============Archivo Supervisor================
+  ofstream archivo4;
+  archivo4.open("Supervisor.txt");
+  for (int i = 0; i < listaSupervisor.size(); i++) {
+    archivo4 << listaSupervisor.at(i)->toString() <<  ";";
+  }
+  archivo4.close();
+
 
 
 

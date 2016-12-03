@@ -8,7 +8,7 @@
 db_administrador::db_administrador(){
   fechaEntrada="";
 }
-db_administrador::db_administrador(string nombre, string correo, string password, string fechaEntrada):Usuario(nombre, correo, password){
+db_administrador::db_administrador(string fechaEntrada,string nombre, string correo, string password):Usuario(nombre, correo, password){
   this->fechaEntrada=fechaEntrada;
 }
 void db_administrador::setFechaEntrada(string fechaEntrada){
@@ -19,7 +19,7 @@ string db_administrador::getFechaEntrada(){
 }
 string db_administrador::toString(){
   stringstream ss;
-  ss << Usuario::toString() << fechaEntrada << " ";
+  ss << Usuario::toString() << fechaEntrada << "\n";
   return ss.str();
 }
 bool db_administrador::verificarPassSize(){

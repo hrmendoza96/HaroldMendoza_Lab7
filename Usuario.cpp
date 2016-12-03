@@ -41,9 +41,9 @@ bool Usuario::verificarPassSize(){
 
 string Usuario::toString() {
     stringstream ss;
-    ss << nombre << " ";
-    ss << correo << " ";
-    ss  << password << " ";
+    ss << nombre << "\n";
+    ss << correo << "\n";
+    ss  << password << "\n";
     return ss.str();
 }
 

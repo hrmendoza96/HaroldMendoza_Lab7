@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <stdlib.h>
 #include "Usuario.h"
 #include "db_administrador.h"
 #include "db_manager.h"
@@ -22,10 +23,12 @@ int main(int argc, char const *argv[]) {
   Usuario* manager;
   Usuario* intern;
   Usuario* supervisor;
-  Usuario* administrador = new db_administrador("admin", "admin@admin", "123", "2016");
+
+  Usuario* administrador = new db_administrador("2013","admin", "admin@admin", "123");
   vector<db_manager*> listaManager;
   vector<db_intern*> listaIntern;
   vector<db_supervisor*> listaSupervisor;
+
 
   string nombre, contrasena;
   do{
